@@ -401,6 +401,7 @@ function fillHtmlList(detailItem){
                 fillHtmlList(typeDetailItem);
                 break;
         }
+        selectSorting(addObject["DATA"]);
         $("#shelter_type_page").removeClass("shelter_move_in_left");
         $("#shelter_type_page").addClass("shelter_move_out_right");
         $("#shelter_list_detail").removeClass("shelter_list_detail_move_out_bottom");
