@@ -1,0 +1,52 @@
+#map_page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#map_page .location_bar {
+  background-color: #0A308A;
+  color: white;
+  font-size: 25px;
+  position: relative;
+}
+#map_page .location_bar::after {
+  position: absolute;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  right: 30px;
+  top: calc(50% - 15px);
+  transform: rotate(45deg);
+}
+#map_page .current_map #map {
+  width: 800px;
+  height: 550px;
+}
+#map_page .location_count_bar {
+  background-color: #b5c1dc;
+  height: 115px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 115px;
+}
+#map_page .location_count_bar span {
+  color: red;
+  margin-left: 50px;
+}
+
+#map_page.map_move_in_top {
+  transition: top 0.5s ease;
+  top: 0;
+}
+
+#map_page.map_move_out_bottom {
+  transition: top 0.5s ease;
+  top: 200%;
+}
+
+/*# sourceMappingURL=map_page.css.map */

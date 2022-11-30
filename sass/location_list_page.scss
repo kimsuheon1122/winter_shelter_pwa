@@ -1,0 +1,69 @@
+@import "mixvariables.scss";
+#location_list_page{
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    .dong_search_bar{
+        background-color: $gray2;
+        font-size: 28px;
+        display: flex;
+        justify-content: space-around;
+        ul{
+            display: flex;
+            gap: 5px;
+            font-weight: 600;
+            padding-left: 10px;
+        }
+        i{
+            color: $gray1;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .dong_list{
+        margin-top: 25%;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 10px;
+            li{
+                flex-basis: calc(100% / 3);
+                border-left: 3px solid $gray1;
+                border-top: 3px solid $gray1;
+                font-weight: 500;
+                font-size: 25px;
+                text-align: center;
+                line-height: 2.5;
+            }
+            .dong_12th, .dong_13th, .dong_14th{
+                border-bottom: 3px solid $gray1;
+            }
+            .dong_3rd, .dong_6th, .dong_9th, .dong_12th, .dong_14th{
+                border-right: 3px solid $gray1;
+            }
+        }
+        margin-bottom: 25%;
+    }
+    a{
+        display: block;
+        background-color: $gangnam_grayBlue;
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        line-height: 3;
+        border-radius: 99px;
+        margin: 0 10px;
+        font-weight: 600;
+    }
+}
+#location_list_page.location_list_move_in_top{
+    transition: top 0.5s ease;
+    top: 0;
+}
+#location_list_page.location_list_move_out_bottom{
+    transition: top 0.5s ease;
+    top: 300%;
+}

@@ -1,0 +1,117 @@
+@import "mixvariables.scss";
+#shelter_list_detail{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    .shelter_list_dong_bar{
+        background-color: $gray2;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 30px;
+        .shelter_list_dong{
+            color: $gray1;
+            font-size: 22px;
+            position: relative;
+            white-space: nowrap;
+            &::after{
+                content: "";
+                position: absolute;
+                display: block;
+                border-bottom: 3px solid $gray1;
+                border-right: 3px solid $gray1;
+                border-radius: 3px;
+                transform: rotate(45deg);
+                width: 18px;
+                height: 18px;
+                right: -30px;
+                top: 25px;
+            }
+        }
+        .change_condition{
+            color: $gangnam_blue;
+            font-size: 22px;
+            i{
+                font-size: 25px;
+            }
+        }
+    }
+    .select_condition{
+        background-color: $gray2;
+        text-align: center;
+        padding: 0px 0px 20px 0;
+        label{
+            font-size: 0;
+        }
+        select{
+            background-color: white;
+            border: 2px solid $gray1;
+            border-radius: 8px;
+            font-size: 18px;
+            -webkit-appearance:none; /* 크롬 화살표 없애기 */
+            -moz-appearance:none; /* 파이어폭스 화살표 없애기 */
+            appearance:none; /* 화살표 없애기 */
+            text-align: center;
+            margin-left: 10px;
+            width: 100px;
+            padding: 5px 0;
+        }
+    }
+    .shelter_list_detail{
+        overflow-y: scroll;
+        background-color: white;
+        border: 2px solid $gray1;
+        li{
+            padding: 20px 30px;
+            border-bottom: 2px solid $gray1;
+            h3{
+                color: $gangnam_blue;
+                font-size: 25px;
+            }
+            p{
+                font-size: 22px;
+            }
+            span{
+                font-size: 20px;
+            }
+            .night{
+                color: red;
+                margin-right: 30px;
+            }
+            .area, .square{
+                color: olive;
+            }
+            .use{
+                color: blue;
+                margin-right: 30px;
+            }
+            .heat{
+                color: rgb(255, 94, 0);
+            }
+            .detail_toggle{
+                transition: all 0.5s ease;
+                display: inline-block;
+                color: transparent;
+                border-bottom: 2px solid $gray1;
+                border-right: 2px solid $gray1;
+                width: 18px;
+                height: 18px;
+                transform: rotate(45deg);
+                margin-left: 95%;
+                margin-top: -10%;
+            }
+            .detail_toggle.rotate{
+                transform: rotate(-135deg);
+            }
+        }
+    }
+}
+#shelter_list_detail.shelter_list_detail_move_in_top{
+    transition: top 0.7s ease;
+    top: 0%;
+}
+#shelter_list_detail.shelter_list_detail_move_out_bottom{
+    transition: top 0.7s ease;
+    top: 400%;
+}

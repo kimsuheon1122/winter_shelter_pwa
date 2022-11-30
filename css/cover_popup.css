@@ -1,0 +1,50 @@
+#cover_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+#cover_popup .popup_bg {
+  position: absolute;
+  top: 0;
+  left: -100;
+  right: 0;
+  bottom: 0;
+  width: 130%;
+  height: 100%;
+  z-index: -1;
+  animation: movecover 4s ease infinite;
+}
+@keyframes movecover {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+#cover_popup h3 {
+  margin-top: 30%;
+  line-height: 5;
+  font-size: 28px;
+  font-weight: 300;
+}
+#cover_popup h1 {
+  font-size: 40px;
+  line-height: 2;
+}
+#cover_popup span {
+  font-size: 22px;
+  display: block;
+  margin: 20% 0 30% 0;
+}
+#cover_popup .popup_logo {
+  width: 50%;
+  height: 100px;
+}
+
+/*# sourceMappingURL=cover_popup.css.map */

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+#shelter_list_detail {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+#shelter_list_detail .shelter_list_dong_bar {
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+#shelter_list_detail .shelter_list_dong_bar .shelter_list_dong {
+  color: rgb(87, 87, 78);
+  font-size: 22px;
+  position: relative;
+  white-space: nowrap;
+}
+#shelter_list_detail .shelter_list_dong_bar .shelter_list_dong::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: 3px solid rgb(87, 87, 78);
+  border-right: 3px solid rgb(87, 87, 78);
+  border-radius: 3px;
+  transform: rotate(45deg);
+  width: 18px;
+  height: 18px;
+  right: -30px;
+  top: 25px;
+}
+#shelter_list_detail .shelter_list_dong_bar .change_condition {
+  color: #0A308A;
+  font-size: 22px;
+}
+#shelter_list_detail .shelter_list_dong_bar .change_condition i {
+  font-size: 25px;
+}
+#shelter_list_detail .select_condition {
+  background-color: #D9D9D9;
+  text-align: center;
+  padding: 0px 0px 20px 0;
+}
+#shelter_list_detail .select_condition label {
+  font-size: 0;
+}
+#shelter_list_detail .select_condition select {
+  background-color: white;
+  border: 2px solid rgb(87, 87, 78);
+  border-radius: 8px;
+  font-size: 18px;
+  -webkit-appearance: none; /* 크롬 화살표 없애기 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none; /* 화살표 없애기 */
+  text-align: center;
+  margin-left: 10px;
+  width: 100px;
+  padding: 5px 0;
+}
+#shelter_list_detail .shelter_list_detail {
+  overflow-y: scroll;
+  background-color: white;
+  border: 2px solid rgb(87, 87, 78);
+}
+#shelter_list_detail .shelter_list_detail li {
+  padding: 20px 30px;
+  border-bottom: 2px solid rgb(87, 87, 78);
+}
+#shelter_list_detail .shelter_list_detail li h3 {
+  color: #0A308A;
+  font-size: 25px;
+}
+#shelter_list_detail .shelter_list_detail li p {
+  font-size: 22px;
+}
+#shelter_list_detail .shelter_list_detail li span {
+  font-size: 20px;
+}
+#shelter_list_detail .shelter_list_detail li .night {
+  color: red;
+  margin-right: 30px;
+}
+#shelter_list_detail .shelter_list_detail li .area, #shelter_list_detail .shelter_list_detail li .square {
+  color: olive;
+}
+#shelter_list_detail .shelter_list_detail li .use {
+  color: blue;
+  margin-right: 30px;
+}
+#shelter_list_detail .shelter_list_detail li .heat {
+  color: rgb(255, 94, 0);
+}
+#shelter_list_detail .shelter_list_detail li .detail_toggle {
+  transition: all 0.5s ease;
+  display: inline-block;
+  color: transparent;
+  border-bottom: 2px solid rgb(87, 87, 78);
+  border-right: 2px solid rgb(87, 87, 78);
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  margin-left: 95%;
+  margin-top: -10%;
+}
+#shelter_list_detail .shelter_list_detail li .detail_toggle.rotate {
+  transform: rotate(-135deg);
+}
+
+#shelter_list_detail.shelter_list_detail_move_in_top {
+  transition: top 0.7s ease;
+  top: 0%;
+}
+
+#shelter_list_detail.shelter_list_detail_move_out_bottom {
+  transition: top 0.7s ease;
+  top: 400%;
+}
+
+/*# sourceMappingURL=shelter_list_detail.css.map */

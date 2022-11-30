@@ -1,0 +1,71 @@
+#serch_for_AED_page {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#serch_for_AED_page .temp_cloth_bar {
+  background-color: #FFD6D6;
+}
+#serch_for_AED_page .AED_map {
+  width: 100%;
+  height: 50%;
+}
+#serch_for_AED_page .AED_map img {
+  width: 100%;
+  height: 100%;
+}
+#serch_for_AED_page .AED_list .AED_select_form {
+  text-align: center;
+  background-color: #ECECEC;
+}
+#serch_for_AED_page .AED_list .AED_select_form label {
+  color: rgb(87, 87, 78);
+  font-weight: 600;
+  font-size: 22px;
+  margin-right: 5px;
+  line-height: 2;
+}
+#serch_for_AED_page .AED_list .AED_select_form select {
+  border: none;
+  font-size: 18px;
+  background-color: #D9D9D9;
+  padding: 3px;
+  margin-right: 5px;
+}
+#serch_for_AED_page .AED_list ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ECECEC;
+  font-size: 22px;
+  color: #0A308A;
+  padding: 8px 0 8px 30px;
+}
+#serch_for_AED_page .AED_list ul li .AED_num {
+  background-color: #0A308A;
+  color: white;
+  border-radius: 99px;
+  padding: 0 15px;
+}
+#serch_for_AED_page .AED_list ul li .AED_heart {
+  display: flex;
+  align-items: flex-end;
+  color: black;
+  font-size: 12px;
+}
+#serch_for_AED_page .AED_list ul li .AED_heart img {
+  width: 40px;
+}
+
+#serch_for_AED_page.AED_move_in_left {
+  transition: left 0.5s ease-out;
+  left: 0%;
+}
+
+#serch_for_AED_page.AED_move_out_right {
+  transition: left 0.7s ease-in;
+  left: 300%;
+}
+
+/*# sourceMappingURL=search_for_AED_page.css.map */

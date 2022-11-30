@@ -1,0 +1,39 @@
+#shelter_type_page {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#shelter_type_page .type_search_bar {
+  background-color: #CBD89B;
+  color: whitesmoke;
+}
+#shelter_type_page .search_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 25%;
+}
+#shelter_type_page .search_list li {
+  flex-basis: 50%;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#shelter_type_page .search_list li img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#shelter_type_page.shelter_move_in_left {
+  transition: left 0.5s ease;
+  left: 0%;
+}
+
+#shelter_type_page.shelter_move_out_right {
+  transition: left 0.5s ease;
+  left: 100%;
+}
+
+/*# sourceMappingURL=shelter_type_page.css.map */

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강남구 따숨쉼터</title>
+    <link rel="icon"
+    href="./img/gn_CI_png/4. CI국문세로.png">    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/3bf6dd234b.js" crossorigin="anonymous"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6fd595c12e9b94fb28bedf3085b75122"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/home_page.css">
+    <link rel="stylesheet" href="./css/shelter_type_page.css">
+    <link rel="stylesheet" href="./css/temp_cloth_page.css">
+    <link rel="stylesheet" href="./css/search_for_AED_page.css">
+    <link rel="stylesheet" href="./css/map_page.css">
+    <link rel="stylesheet" href="./css/location_list_page.css">
+    <link rel="stylesheet" href="./css/shelter_list_detail.css">
+    <link rel="stylesheet" href="./css/cover_popup.css">
+</head>
+<body>
+    <div id="cover_popup" class="">
+        <img class = "popup_bg"src="./img/gangnam_load.jpg" alt="">
+        <h3>한파대피소 안내 서비스</h3>
+        <h1>강남구<br>따 숨 쉼 터</h1>
+        <span></span>
+        <img class = "popup_logo" src="./img/gn_CI_png/5. CI영문좌우.png" alt="" class="cover_popup_footer_logo">
+    </div>
+    <div id="home_page">
+        <div class="home_top">
+                <div class="home_top_top">
+                    <ul class="text_size_filter">
+                        <li>가</li>
+                        <li>가</li>
+                    </ul>
+                    <div class="current_weather">
+                        <div class="current_location">
+                            강남구 역삼동
+                        </div>
+                        <div class="curret_temp">
+                            -15ºC
+                        </div>
+                    </div>
+                </div>
+                <div class="home_top_center">
+                    <i class="fa-solid fa-info"></i>
+                    <span>한파주의보 발령</span>
+                </div>
+                <div class="home_top_bottom">
+                    현재 시간 : <span>15:54</span>
+                </div>
+        </div>
+        <div class="home_center">
+            <div class="near_move">
+                <i class="fa-regular fa-compass"></i>
+                <p>가장 가까운 쉼터로 이동하기</p>
+            </div>
+            <form id = "form" onsubmit="return inputSearch();">
+                <input 
+                id="search" 
+                name="a" 
+                type="text"
+                placeholder="기관명 / 동(도로명) "
+                value=""
+                onsubmit="">
+                <i class="fa-solid fa-magnifying-glass">
+                    <input id = "magnifying" type="submit" value="제출">
+                </i>
+            </form>
+            <div id="auto_maker">
+            
+            </div>
+            <ul class="home_center_rec">
+                <li class="map_page"><a href="#"><img src="./img/search_as_map.png" alt="">지도로 쉽터 찾기</a></li>
+                <li class="shelter_type_page"><a href="#"><img src="./img/search_as_type.png" alt="">쉼터 유형으로 찾기</a></li>
+                <li class="temp_cloth_page"><a href="#"><img src="./img/temp_cloth.png" alt="">온도별 옷차림</a></li>
+                <li class="serch_for_AED_page"><a href="#"><img src="./img/search_for_AED.png" alt="">심장제세동기 찾기</a></li>
+            </ul>
+        </div>
+        <div class="home_bottom">
+            <a href="#" class="help"><i class="fa-solid fa-phone"></i>긴급구조</a>
+            <a 
+            href="https://chatbot.ips.go.kr/ptl/main.ndo"
+            onclick=
+            "window.open(this.href, '_blank', 'width=375, height=812,scrollbars= 0, toolbar=0, menubar=no, location=no'); 
+            return false;"
+            >
+                <img src="./img/korea_manager.png" alt="">구삐상담
+            </a>
+        </div>
+        <div class="warning_ment move_out_down">
+            <p class="warning">
+                119구조·구급에 관한 법률<br />
+                제30조(과태료)<br />
+                ① 제4조제3항을 위반하여 위급상황을 소방기관 또는 <br />
+                관계 행정기관에 거짓으로 알린 자에게는 <br />
+                500만원 이하의 과태료를 부과한다.<br />
+            </p>
+            <ul class="call">
+                <li><a href="tel:+1588-3650">재난신고<img src="./img/red_phone_.png" alt=""></a></li>
+                <li><a href="tel:+112">범죄신고<img src="./img/red_phone_.png" alt=""></a></li>
+                <li><a href="tel:+110">민원상담<img src="./img/red_phone_.png" alt=""></a></li>
+                <li><a href="tel:+02-2100-3399">행안부 안전 상황실<img src="./img/red_phone_.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="map_page" class="map_move_out_bottom">
+        <div class="logo_bar">
+            <img src="./img/logo.png" alt="">
+            <span>따숨쉼터</span>
+        </div>
+        <div class="location_bar under_the_logo_bar">
+            <p>서울시 강남구 <span>역삼동</span></p>
+        </div>
+        <div class="current_map">
+            <div id="map"></div>
+        </div>
+        <div class="location_count_bar">
+            <p><a href="#">따숨쉼터 목록<span>10</span></a></p>
+        </div>
+    </div>
+    <div id="location_list_page" class="location_list_move_out_bottom">
+        <div class="logo_bar">
+            <img src="./img/logo.png" alt="">
+            <span>따숨쉼터</span>
+        </div>
+        <div class="dong_search_bar under_the_logo_bar">
+            <ul>
+                <li>서울시 &gt</li>
+                <li>강남구 &gt</li>
+                <li><span>역삼동</span></li>
+            </ul>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="dong_list">
+            <ul>
+                <li class="dong_1st">개포동</li>
+                <li class="dong_2ed">논현동</li>
+                <li class="dong_3rd">대치동</li>
+                <li class="dong_4th">도곡동</li>
+                <li class="dong_5th">삼성동</li>
+                <li class="dong_6th">세곡동</li>
+                <li class="dong_7th">수서동</li>
+                <li class="dong_8th">신사동</li>
+                <li class="dong_9th">압구정동</li>
+                <li class="dong_10th">역삼동</li>
+                <li class="dong_11th">율현동</li>
+                <li class="dong_12th">일원동</li>
+                <li class="dong_13th">자곡동</li>
+                <li class="dong_14th">청담동</li>
+            </ul>
+        </div>
+        <a href="#" class="look_for_map">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>역삼동</span> 지도로 보기
+        </a>
+    </div>
+    <div id="shelter_type_page" class="shelter_move_out_right">
+        <div class="logo_bar">
+            <img src="./img/logo.png" alt="">
+            <span>따숨쉼터</span>
+        </div>
+        <div class="type_search_bar under_the_logo_bar">
+            쉼터 유형으로 찾기
+        </div>
+        <ul class="search_list">
+            <li class="welfare_center"><img src="img/welfare_center.png" alt="">복지관</li>
+            <li class="silvertown"><img src="img/silvertown.png" alt="">경로당</li>
+            <li class="socialcenter"><img src="img/socialcenter.png" alt="">주민센터</li>
+            <li class="lounge"><img src="img/lounge.png" alt="">라운지</li>
+        </ul>
+    </div>
+    <div id="temp_cloth_page" class="cloth_move_out_right">
+        <div class="logo_bar">
+            <img src="./img/logo.png" alt="">
+            <span>따숨쉼터</span>
+        </div>
+        <div class="temp_cloth_bar under_the_logo_bar">
+            온도별 옷차림
+        </div>
+        <p id="result_of_range">0<span>ºC</span></p>
+        <div class="cloth_img">
+            <img id = "img_of_range" src="./img/snowman.png" alt="">
+        </div>
+        <p id = "ment_of_range">
+            패딩, 두꺼운코트, 목도리, 기모제품을(를) 입는 것이 좋습니다.
+        </p>
+        <input type="range" min="-10" max="40" value="" step="1" class="range purple" />
+    </div>
+    <div id="serch_for_AED_page" class="AED_move_out_right">
+        <div class="logo_bar">
+            <img src="./img/logo.png" alt="">
+            <span>따숨쉼터</span>
+        </div>
+        <div class="temp_cloth_bar under_the_logo_bar">
+            심장제세동기찾기
+        </div>
+        <div class="AED_map">
+            <img src="./img/AED_map.PNG" alt="AED_map">
+        </div>
+        <div class="AED_list">
+            <div class="AED_select_form">
+                <label for="km_select">반경</label>
+                <select name="" id="km_select">
+                    <option value="1km">1km</option>
+                    <option value="2km">2km</option>
+                    <option value="3km">3km</option>
+                    <option value="4km">4km</option>
+                    <option value="5km">5km</option>
+                </select>
+                <label for="order_select">정렬</label>
+                <select name="" id="order_select">
+                    <option value="distance">거리순</option>
+                    <option value="name">이름순</option>
+                </select>
+            </div>
+            <ul>
+                <li><span class="AED_num">1</span>삼성전자서초사옥<span class="AED_heart"><img src="./img/AED_logo.png" alt="">0.2km</span></li>
+                <li><span class="AED_num">2</span>서운중학교<span class="AED_heart"><img src="./img/AED_logo.png" alt="">0.2km</span></li>
+                <li><span class="AED_num">3</span>서초2동주민센터<span class="AED_heart"><img src="./img/AED_logo.png" alt="">0.2km</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="shelter_list_detail" class="shelter_list_detail_move_out_bottom">
+        <div class="logo_bar">
+            <img src="./img/logo.png" alt="">
+            <span>따숨쉼터</span>
+        </div>
+        <div class="shelter_list_dong_bar under_the_logo_bar">
+            <div class="shelter_list_dong">강남구 <span>역삼동</span></div>
+            <!-- <div class="change_condition"><i class="fa-solid fa-filter"></i>조건변경</div> -->
+        </div>
+        <div class="select_condition">
+            <label for="type_select">쉼터유형</label>
+            <select name="" id="type_select">
+                <option value="shelter_all">쉼터유형</option>
+                <option value="welfare_center">복지관</option>
+                <option value="silvertown">경로당</option>
+                <option value="socialcenter">주민센터</option>
+                <option value="lounge">라운지</option>
+            </select>
+            <label for="night_select">야간개방해당</label>
+            <select name="" id="night_select">
+                <option value="night_all">주간, 야간</option>
+                <option value="weekly">주간</option>
+                <option value="nighttime">주간, 야간</option>
+            </select>
+            <label for="area_select">이용면적</label>
+            <select name="" id="area_select">
+                <option value="area_all">이용면적</option>
+                <option value="below_thirty">30평 이하</option>
+                <option value="below_oneh">100평 이하</option>
+                <option value="below_threeh">300평 이하</option>
+                <option value="over_threeh">300평 초과</option>
+            </select>
+        </div>
+        <div class="shelter_list_detail">
+            <ul>
+                <!-- js작성구역 -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

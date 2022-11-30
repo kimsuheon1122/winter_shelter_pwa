@@ -1,0 +1,36 @@
+@import "mixvariables.scss";
+#shelter_type_page{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    .type_search_bar{
+        background-color: $gangnam_yellowgreen;
+        color: whitesmoke;
+    }
+    .search_list{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 25%;
+        li{
+            flex-basis: 50%;
+            font-size: 28px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+#shelter_type_page.shelter_move_in_left{
+    transition: left 0.5s ease;
+    left : 0%;
+}
+#shelter_type_page.shelter_move_out_right{
+    transition: left 0.5s ease;
+    left : 100%;
+}

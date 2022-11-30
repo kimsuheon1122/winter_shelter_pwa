@@ -1,0 +1,38 @@
+body {
+  position: relative;
+  max-width: 1200px;
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.display_hidden {
+  display: none;
+}
+
+.logo_bar {
+  width: 100%;
+  background-color: #ECECEC;
+  height: 70px;
+  display: flex;
+  padding: 10px;
+}
+.logo_bar span {
+  color: #0A308A;
+  font-size: 35px;
+  font-weight: 500;
+  padding-left: 15px;
+  line-height: 40px;
+}
+
+.under_the_logo_bar {
+  height: 80px;
+  font-size: 38px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 80px;
+}
+
+/*# sourceMappingURL=main.css.map */

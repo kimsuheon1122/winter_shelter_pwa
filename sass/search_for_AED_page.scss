@@ -1,0 +1,76 @@
+@import "mixvariables.scss";
+
+#serch_for_AED_page{
+    background-color: white;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    .temp_cloth_bar{
+        background-color: $gangnam_pink;
+    }
+    .AED_map{
+        width: 100%;
+        height: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .AED_list{
+        .AED_select_form{
+            text-align: center;
+            background-color: $logo_gray;
+            label{
+                color: $gray1;
+                font-weight: 600;
+                font-size: 22px;
+                margin-right: 5px;
+                line-height: 2;
+            }
+            select{
+                border: none;
+                font-size: 18px;
+                background-color: $gray2;
+                padding: 3px;
+                margin-right: 5px;
+                option{
+                }
+            }
+        }
+        ul{
+            li{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid $logo_gray;
+                font-size: 22px;
+                color: $gangnam_blue;
+                padding: 8px 0 8px 30px;
+                .AED_num{
+                    background-color: $gangnam_blue;
+                    color: white;
+                    border-radius: 99px;
+                    padding: 0 15px;
+                }
+                .AED_heart{
+                    img{
+                        width: 40px;
+                    }
+                    display: flex;
+                    align-items: flex-end;
+                    color: black;
+                    font-size: 12px;
+                }
+                
+            }
+        }
+    }
+}
+#serch_for_AED_page.AED_move_in_left{
+    transition: left 0.5s ease-out;
+    left : 0%;
+}
+#serch_for_AED_page.AED_move_out_right{
+    transition: left 0.7s ease-in;
+    left : 300%;
+}
