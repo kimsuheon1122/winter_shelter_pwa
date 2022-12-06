@@ -11,7 +11,9 @@
     <script src="https://kit.fontawesome.com/3bf6dd234b.js" crossorigin="anonymous"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./js/main.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4ae6a4f44ee6935572094f5f9e4ec015"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6fd595c12e9b94fb28bedf3085b75122"></script>
+    <!-- 로컬호스트위한 카카오api -->
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home_page.css">
@@ -23,19 +25,18 @@
     <link rel="stylesheet" href="./css/shelter_list_detail.css">
     <link rel="stylesheet" href="./css/cover_popup.css">
     <script>
-            if('serviceWorker' in navigator){ 
-            //serviceworker가 있을때(서비스워커 지원 여부)
-            navigator.serviceWorker
-            .register("service-worker.js")//등록
-            .then(function(success){
-                console.log("successing_install_for_serviceworker", success)
+        if ("serviceWorker" in navigator) {
+          //서비스워커가 있을때(서비스워커 지원여부)
+          navigator.serviceWorker
+            .register("service-worker.js") //등록
+            .then(function (success) {
+              console.log("serviceWorker 설치에 성공했습니다!", success);
             })
-            .catch(function(error){
-                console.log("fail_install_for_serviceworker", error)
-            })
-
+            .catch(function (error) {
+              console.log("serviceWorker 설치에 실패했습니다", error);
+            });
         }
-    </script>
+      </script>
 </head>
 <body>
     <div id="cover_popup" class="">
@@ -107,7 +108,7 @@
                 <img src="./img/korea_manager.png" alt="">구삐상담
             </a>
         </div>
-        <div class="warning_ment move_out_down">
+        <div class="warning_ment move_out_down display_hidden">
             <p class="warning">
                 119구조·구급에 관한 법률<br />
                 제30조(과태료)<br />
@@ -174,7 +175,7 @@
             <span>역삼동</span> 지도로 보기
         </a>
     </div>
-    <div id="shelter_type_page" class="shelter_move_out_right">
+    <div id="shelter_type_page" class="shelter_move_out_right display_hidden">
         <div class="logo_bar">
             <img src="./img/logo.png" alt="">
             <span>따숨쉼터</span>
@@ -189,7 +190,7 @@
             <li class="lounge"><img src="img/lounge.png" alt="">라운지</li>
         </ul>
     </div>
-    <div id="temp_cloth_page" class="cloth_move_out_right">
+    <div id="temp_cloth_page" class="cloth_move_out_right display_hidden">
         <div class="logo_bar">
             <img src="./img/logo.png" alt="">
             <span>따숨쉼터</span>
@@ -206,7 +207,7 @@
         </p>
         <input type="range" min="-10" max="40" value="" step="1" class="range purple" />
     </div>
-    <div id="serch_for_AED_page" class="AED_move_out_right">
+    <div id="serch_for_AED_page" class="AED_move_out_right display_hidden">
         <div class="logo_bar">
             <img src="./img/logo.png" alt="">
             <span>따숨쉼터</span>

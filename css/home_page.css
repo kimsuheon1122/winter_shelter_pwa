@@ -2,6 +2,7 @@
   height: 100vh;
   width: 100vw;
   position: relative;
+  overflow-y: scroll;
 }
 #home_page .home_top {
   background-image: url(../img/chandler-cruttenden-w8hWTFpGtpY-unsplash.jpg);
@@ -136,19 +137,27 @@
 #home_page .home_center .home_center_rec {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 #home_page .home_center .home_center_rec li {
   flex-basis: 50%;
   font-size: 0;
   text-align: center;
   margin-top: 25px;
+  display: block;
 }
 #home_page .home_center .home_center_rec li img {
   width: 90%;
+  height: 35%;
 }
 #home_page .home_bottom {
   height: 10%;
   display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 1px;
 }
 #home_page .home_bottom a {
   flex-basis: 50%;

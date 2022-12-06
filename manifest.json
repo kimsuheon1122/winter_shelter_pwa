@@ -8,46 +8,46 @@
   "dir": "auto",
   "display": "standalone",
   "orientation": "any",
-  "scope": "https://kimsuheon-1122.github.io/winter_shelter/",
+  "scope": "/",
   "lang" : "ko",
-  "start_url": "https://kimsuheon-1122.github.io/winter_shelter/",
+  "start_url": "/",
   "gcm_sender_id": "49625052041",
   "gcm_user_visible_only": true,
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [
     {
-        "src": "images/screen_shot_1.png",
-        "sizes" : "431x886",
+        "src": "img/screen_shot_1.png",
+        "sizes" : "387x823",
         "type" : "image/png"
     },
     {
-        "src": "images/screen_shot_2.png",
-        "sizes" : "435x887",
+        "src": "img/screen_shot_2.png",
+        "sizes" : "387x823",
         "type" : "image/png"
     },
     {
-        "src": "images/screen_shot_3.png",
-        "sizes" : "434x856",
+        "src": "img/screen_shot_3.png",
+        "sizes" : "387x823",
         "type" : "image/png"
       }
   ],
   "icons": [
     {
-      "src": "images/maskable_icon_x512.png",
+      "src": "img/maskable_icon_x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "images/maskable_icon_x128.png",
-      "sizes": "128x128",
+      "src": "img/maskable_icon_x384.png",
+      "sizes": "384x384",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "images/maskable_icon_x48.png",
-      "sizes": "48x48",
+      "src": "img/maskable_icon_x192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     }

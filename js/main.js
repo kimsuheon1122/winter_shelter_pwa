@@ -1,26 +1,44 @@
+/* 스마트폰 - 터치무브금지 */
 /* 긴급신고 move_in, move_out */
 $(".help").click(function(){
-    $(".warning_ment").removeClass("move_out_down");
-    $(".warning_ment").addClass("move_in_up");
+    $(".warning_ment").removeClass("display_hidden");
+    setTimeout(()=>{
+        $(".warning_ment").removeClass("move_out_down");
+        $(".warning_ment").addClass("move_in_up");
+    },0)
 });
+/* 긴급신고 감추기 */
 $(".home_top").click(function(){
     $(".warning_ment").removeClass("move_in_up");
     $(".warning_ment").addClass("move_out_down");
+    setTimeout(()=>{
+        $(".warning_ment").addClass("display_hidden");
+    },300)
 });
 /* 쉼터유형 move_in, move_out */
 $(".shelter_type_page").click(function(){
-    $("#shelter_type_page").removeClass("shelter_move_out_right");
-    $("#shelter_type_page").addClass("shelter_move_in_left");
+    $("#shelter_type_page").removeClass("display_hidden");
+    setTimeout(()=>{
+        $("#shelter_type_page").removeClass("shelter_move_out_right");
+        $("#shelter_type_page").addClass("shelter_move_in_left");
+    },0)
 });
 /* 계절별 옷차림 move_in, move_out */
 $(".temp_cloth_page").click(function(){
-    $("#temp_cloth_page").removeClass("cloth_move_out_right");
-    $("#temp_cloth_page").addClass("cloth_move_in_left");
+    $("#temp_cloth_page").removeClass("display_hidden");
+    setTimeout(()=>{
+        $("#temp_cloth_page").removeClass("cloth_move_out_right");
+        $("#temp_cloth_page").addClass("cloth_move_in_left");
+    },0)
 });
 /* AED move_in, move_out */
 $(".serch_for_AED_page").click(function(){
-    $("#serch_for_AED_page").removeClass("AED_move_out_right");
-    $("#serch_for_AED_page").addClass("AED_move_in_left");
+    $("#serch_for_AED_page").removeClass("display_hidden");
+    setTimeout(()=>{
+        $("#serch_for_AED_page").removeClass("AED_move_out_right");
+        $("#serch_for_AED_page").addClass("AED_move_in_left");
+    },0)
+
 });
 /*  지도로 쉼터 찾기 move_in, move_out*/
 $(".map_page ,.near_move").click(function(){
@@ -61,16 +79,22 @@ function typing(){
 let interval = setInterval(function(){
     typing();
 },200)
-$(".popup_logo").mouseover(function(){
+
+/* $(".popup_logo").mouseover(function(){
     $("#cover_popup").addClass("display_hidden");
     clearInterval(interval);
-})
+}) */
+setTimeout(() => 
+    $("#cover_popup").addClass("display_hidden")
+    // clearInterval(interval)
+, 3000)
+
 /* 홈으로 돌아가기 */
 $(".logo_bar img,.logo_bar span").click(function(){
-    $("#shelter_type_page").removeClass("shelter_move_in_left");
-    $("#shelter_type_page").addClass("shelter_move_out_right");
     $("#temp_cloth_page").removeClass("cloth_move_in_left");
     $("#temp_cloth_page").addClass("cloth_move_out_right");
+    $("#shelter_type_page").removeClass("shelter_move_in_left");
+    $("#shelter_type_page").addClass("shelter_move_out_right");
     $("#serch_for_AED_page").removeClass("AED_move_in_left");
     $("#serch_for_AED_page").addClass("AED_move_out_right");
     $("#map_page").removeClass("map_move_in_top");
@@ -80,6 +104,14 @@ $(".logo_bar img,.logo_bar span").click(function(){
     $("#shelter_list_detail").removeClass("shelter_list_detail_move_in_top");
     $("#shelter_list_detail").addClass("shelter_list_detail_move_out_bottom");
     $('#auto_maker').children().remove();
+    setTimeout(()=>{
+        $("#serch_for_AED_page").addClass("display_hidden");
+    },700)
+    setTimeout(()=>{
+        $("#temp_cloth_page").addClass("display_hidden");
+        $("#shelter_type_page").addClass("display_hidden");
+
+    },500)
 });
 /* 현재시간 불러오기 */
 let today = new Date();

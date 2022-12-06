@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["js/main.js","de1c6e6ce21072edd6ff94ae16964a3c"]];
+var precacheConfig = [];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -285,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/this\.is\.a\.regex/, toolbox.networkFirst, {});
+toolbox.router.get(/this\\.is\\.a\\.regex/, toolbox.networkFirst, {});
 
 
 

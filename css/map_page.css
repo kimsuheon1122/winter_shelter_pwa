@@ -22,9 +22,16 @@
   top: calc(50% - 15px);
   transform: rotate(45deg);
 }
+#map_page .current_map{
+}
 #map_page .current_map #map {
+  background-color: white;
   width: 800px;
-  height: 550px;
+  height: 700px;
+  position: absolute;
+  bottom: 115px;
+  top: 150px;
+  left: 0;
 }
 #map_page .location_count_bar {
   background-color: #b5c1dc;
@@ -33,6 +40,11 @@
   font-weight: 600;
   font-size: 30px;
   line-height: 115px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2
 }
 #map_page .location_count_bar span {
   color: red;
