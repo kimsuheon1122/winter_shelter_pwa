@@ -1,9 +1,10 @@
 module.exports= {
       staticFileGlobs: [
-       "app/css/**.css",
-        "app/html/**.html",    
-        "app/img/**.*",
-        "app/js/**.js",
+        '*.html',
+        'css/**.css',
+        'images/**.*',
+        'img/**.*',
+        'js/*.js'
       ],
       stripPrefix: 'app/',
       runtimeCaching: [{
