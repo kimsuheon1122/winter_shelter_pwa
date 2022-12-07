@@ -1,36 +1,42 @@
 {
-    "name":"winter_shelter",
-    "short_name":"WINTERSHELTER",
-    
-
-    "background_color": "#ffffff",
+  "name": "winter_shelter",
+  "short_name": "WINTERSHELTER",
+  "background_color": "#ffffff",
   "description": "PWA_PAGE_FOR_WINTER_SHELTER(WEB_APP)",
   "dir": "auto",
   "display": "standalone",
   "orientation": "any",
   "scope": "/",
-  "lang" : "ko",
+  "lang": "ko",
   "start_url": "/",
   "gcm_sender_id": "49625052041",
   "gcm_user_visible_only": true,
   "theme_color": "#ffffff",
-  "categories": [],
+  "categories": [
+    "government",
+    "health",
+    "lifestyle",
+    "politics",
+    "security",
+    "social",
+    "weather"
+  ],
   "screenshots": [
     {
-        "src": "img/screen_shot_1.png",
-        "sizes" : "387x823",
-        "type" : "image/png"
+      "src": "img/screen_shot_1.png",
+      "sizes": "387x823",
+      "type": "image/png"
     },
     {
-        "src": "img/screen_shot_2.png",
-        "sizes" : "387x823",
-        "type" : "image/png"
+      "src": "img/screen_shot_2.png",
+      "sizes": "383x822",
+      "type": "image/png"
     },
     {
-        "src": "img/screen_shot_3.png",
-        "sizes" : "387x823",
-        "type" : "image/png"
-      }
+      "src": "img/screen_shot_3.png",
+      "sizes": "387x822",
+      "type": "image/png"
+    }
   ],
   "icons": [
     {
