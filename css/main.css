@@ -1,15 +1,16 @@
 html{
   max-width: 640px;
   overflow: hidden;
+  margin: 0 auto;
 }
 body {
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
   height: 100%;
-  width: 100%;
+  background-color: white;
   overflow: hidden;
-
+  width: 100%;
 }
 
 .display_hidden {
